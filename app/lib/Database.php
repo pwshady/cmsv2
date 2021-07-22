@@ -40,6 +40,23 @@ class Database
 	}
 
 	/**
+	 * 
+	 */
+	public function getRowByKey(string $nameTable = "", string $nameColumnKey = "", string $key = "")
+	{
+		$sql = "SELECT * FROM " . $nameTable . " WHERE " . $nameColumnKey . " = :key";
+		$stmt = $this->database->prepare($sql);
+		$stmt->bindValue(":key", $key);
+		try{
+			$stmt->execute();
+			return $stmt->fetchAll(PDO::FETCH_ASSOC)[0];
+		}
+		catch(PDOException $e){
+			return [];
+		};
+	}
+
+	/**
 	 * The function imports the available rows to and from the table.
 	 * @param Table name. Default - "". Format: string.
 	 * @param Access level. Default - 0. Format: integer.

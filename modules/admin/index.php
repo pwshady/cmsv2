@@ -1,5 +1,5 @@
 <?php
-print("rr");
+
 include "settings.php";
 //Login to the admin panel.
 if(!isset($_SESSION["admin"])){
@@ -8,4 +8,3 @@ if(!isset($_SESSION["admin"])){
 }
 
 
-print($_SESSION["admin"]);

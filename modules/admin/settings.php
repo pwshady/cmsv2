@@ -1,10 +1,10 @@
 <?php
 //Load settings
-$settings = $GLOBALS["db"]->getTable("admin_header_settings");
+$settings = $GLOBALS["db"]->getTable("admin_settings");
 foreach ($settings as $key => $value)
 {
     switch ($value["operation"]){
-        case 1: //Creates a session from $value["name"] by separator: "="
+        case 1: //Creates a session from $value["name"] by separator: "=".
             $pieces = explode("=", $value["name"]);
             if(count($pieces) == 2){
                 print(count($pieces));
@@ -16,4 +16,8 @@ foreach ($settings as $key => $value)
             break;
     }
 }
-print_r($_SESSION);
+
+//Connecting a language pack.
+$languageDirect = $GLOBALS["db"]->getRowByKey("admin_language", "number", $_SESSION["adminLanguage"])["url"];
+include $languageDirect . "name-variable.php";
+

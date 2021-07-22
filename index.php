@@ -27,7 +27,7 @@ if(is_null($db)){
     }
     $router = new Router($model);
     for ($i = 0; $i < count($model); $i++){
-        print_r("<p>" . $model[$i]["url"] . "</p>");
+        //print_r("<p>" . $model[$i]["url"] . "</p>");
     };
     //return $content;
 }
