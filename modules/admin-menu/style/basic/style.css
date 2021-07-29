@@ -1,0 +1,47 @@
+.admin-menu-page-body
+{
+    margin: 0px;
+    height: 100vh;
+
+}
+
+
+.admin-menu-content
+{
+    display: inline-block;
+
+}
+
+.admin-menu-left
+{
+    font-size: 24px;
+    background-color: #1D2327;
+    width: 320px;
+    height: auto;
+    display: inline-block;
+    vertical-align:bottom;
+    cursor: pointer;
+    color: #fff;
+}
+
+.admin-menu-modul
+{
+    background-color: green;
+}
+
+.admin-menu-center
+{
+    font-size: 32px;
+    background-color: #F0F0F1;
+    width: 640px;
+    display: inline-block;
+
+}
+
+.admin-menu-footer
+{
+    background-color: #E6EEF5;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
